@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>setAttribute Demo</title>
+  <script>
+    function setAttributeDemo() {
+      var element = document.getElementById("myElement");
+      element.setAttribute("class", "highlight");
+    }
+  </script>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="setAttributeDemo()">Set Attribute</button>
+  <p id="myElement">This is a paragraph.</p>
+</body>
+</html>

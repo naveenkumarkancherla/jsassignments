@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hasAttributes and attributes Demo</title>
+  <script>
+    function hasAttributesDemo() {
+      var element = document.getElementById("myElement");
+      var hasAttrs = element.hasAttributes();
+      var attributes = element.attributes;
+
+      console.log("Has attributes: " + hasAttrs);
+      console.log("Attributes:");
+      for (var i = 0; i < attributes.length; i++) {
+        console.log(attributes[i].name + ": " + attributes[i].value);
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="hasAttributesDemo()">Check Attributes</button>
+  <p id="myElement" class="highlight" data-custom="example">This is a paragraph.</p>
+</body>
+</html>

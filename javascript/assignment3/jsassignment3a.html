@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Changing Background Color</title>
+  <script>
+    function changeBackgroundColor() {
+      var favoriteColor = prompt("Please enter your favorite color:");
+      var bodyFirstChild = document.body.firstElementChild;
+      bodyFirstChild.style.backgroundColor = favoriteColor;
+      bodyFirstChild.innerText="My favorite color is "+favoriteColor;
+    //   document.write("my favorite color is: ",favoriteColor);
+    }
+  </script>
+</head>
+<body>
+  <h1>Welcome to My html world!</h1>
+  <button onclick="changeBackgroundColor()">Change Background Color</button>
+</body>
+</html>

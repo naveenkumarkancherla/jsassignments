@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Demos</title>
+  <script>
+    function appendDemo() {
+      var element = document.createElement("p");
+      element.textContent = "Appended Paragraph";
+      document.getElementById("myElement").append(element);
+    }
+
+    function prependDemo() {
+      var element = document.createElement("p");
+      element.textContent = "Prepended Paragraph";
+      document.getElementById("myElement").prepend(element);
+    }
+
+    function beforeDemo() {
+      var element = document.createElement("p");
+      element.textContent = "New Paragraph";
+      document.getElementById("myElement").before(element);
+    }
+
+    function afterDemo() {
+      var element = document.createElement("p");
+      element.textContent = "New Paragraph";
+      document.getElementById("myElement").after(element);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="appendDemo()">Append</button>
+  <button onclick="prependDemo()">Prepend</button>
+  <button onclick="beforeDemo()">Before</button>
+  <button onclick="afterDemo()">After</button>
+  <div id="myElement">
+    <p>Existing Paragraph</p>
+  </div>
+</body>
+</html>
