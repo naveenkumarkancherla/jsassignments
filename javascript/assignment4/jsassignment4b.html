@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Load Script with async/await</title>
+</head>
+<body>
+  <h1>Script Loading with async/await</h1>
+  <button onclick="loadScript()">Load Script</button>
+
+  <script>
+    async function loadScript() {
+      const scriptUrl = 'path/to/your/script.js';
+
+      try {
+        await new Promise((resolve, reject) => {
+          const script = document.createElement('script');
+          script.src = scriptUrl;
+          script.onload = resolve;
+          script.onerror = reject;
+          document.head.appendChild(script);
+        });
+        console.log('Script loaded successfully.');
+        // Here, you can perform any actions that depend on the loaded script.
+        // For example, you may want to call functions from the loaded script.
+      } catch (error) {
+        console.error('Error loading script:', error);
+        // Handle the error gracefully here.
+      }
+    }
+  </script>
+</body>
+</html>
