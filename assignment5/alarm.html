@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+    body{
+        margin: 0;
+        padding: 0;
+        background: url('alarm.gif') no-repeat center center/cover;
+        background-size: cover;
+        height: 100vh;
+    }
+   </style>
+   <script>
+        function setAlarm() {
+            var alarmTime = document.getElementById('alarmTime').value;
+
+            var currentTime = new Date();
+            var alarmDate = new Date(currentTime.toDateString() + ' ' + alarmTime);
+
+            if (alarmDate <= currentTime) {
+                alert("Please choose a future time for the alarm.");
+                return;
+            }
+
+            var timeDifference = alarmDate - currentTime;
+
+            setTimeout(function () {
+                var audio = new Audio('alarm_sound.mp3');
+                audio.play();
+                showAlert();
+            }, timeDifference);
+        }
+
+        function showAlert() {
+            var alertContainer = document.getElementById('alertContainer');
+            alertContainer.innerHTML = `
+                <div class="alert alert-success mt-3 alert-dismissible fade show" role="alert">
+                    Alarm is set! Get ready!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            `;
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Alarm Clock</h1>
+        <div class="form-group">
+            <label for="alarmTime">Set Alarm Time:</label>
+            <input type="time" id="alarmTime" name="alarmTime" class="form-control">
+        </div>
+        <button class="btn btn-primary mt-3" onclick="setAlarm()">Set Alarm</button>
+        <div id="alertContainer"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
