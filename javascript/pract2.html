@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Changing Background Color</title>
+</head>
+<body>
+  <h1>Welcome to My css,HTML,js world!</h1>
+  <button id="button">Change Background Color</button>
+  <script>
+    let btn = document.getElementById('button');
+    btn.addEventListener('click', changeBackgroundColor = () => {
+      var favoriteColor = prompt("Please enter your favorite color:");
+      var bodyFirstChild = document.body.firstElementChild;
+      bodyFirstChild.style.backgroundColor = favoriteColor;
+      bodyFirstChild.innerText = "My favorite color is " + favoriteColor;
+    });
+  </script>
+</body>
+</html>

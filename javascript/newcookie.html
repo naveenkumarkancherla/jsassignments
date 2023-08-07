@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <p>Click the button to check if the "email" cookie is set.</p>
+  <button onclick="checkCookie()">Check Cookie</button>
+  <p id="demo"></p>
+
+  <script>
+    function createCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+      }
+      document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function deleteCookie(name) {
+      document.cookie = name + '=; expires=Mon, 31 July 2023 12:00:00 GMT; path=/;';
+    }
+
+    function checkCookie() {
+      var email = getCookie("email");
+      var x = document.getElementById("demo");
+      if (email != "") {
+        x.innerHTML = "You have been to this site before. Email: " + email;
+      } else {
+        email = prompt("Please enter your email address:", "");
+        if (email != "" && email != null) {
+          createCookie("email", email, 365);
+          x.innerHTML = "Cookie set successfully. Email: " + email;
+        } else {
+          x.innerHTML = "No email entered. Cookie not set.";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
