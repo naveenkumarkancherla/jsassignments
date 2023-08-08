@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Assessment 1</title>
+</head>
+<body>
+<script>
+
+  let pizza = true;
+
+// 1. Assigning a value false to 'pizza' and print it on console
+pizza = false;
+console.log("1 Updated pizza value:", pizza); // returns false
+
+// Declare a constant pizza1 with the value true
+const pizza1 = true;   // reference  error
+
+// 3 Topic scoping
+  var topic = "Javascript";
+  if (topic) {
+    let topic = "React";
+    console.log("3 Inside if block:", topic); // 3 Inside if block:React
+  }
+  console.log("4 Outside if block:", topic); //4. Outside if block:Javascript
+  
+  //5 noting both the values here for 3 we will get "React"
+  //for 4th Javascript
+
+  // 6 Get container element by ID
+  const container = document.getElementById("container");
+  
+  //7 reference of id "container" will be retrived here <div id="container"></div>
+  
+
+  // 8. Create divs with click event listeners
+  const container = document.getElementById("container");
+  
+  // Traditional for loop to create and add div elements
+  for (let i = 0; i < 5; i++) {
+    // Create a new div element
+    const div = document.createElement("div");
+    
+    // Add event listener for click event
+    div.addEventListener("click", () => {
+      alert(`Clicked on iteration ${i + 1}`);
+    });
+    
+    // Add text content to the div
+    div.textContent = `Iteration ${i + 1}`;
+    
+    // Add the div to the container
+    container.appendChild(div);
+  }
+
+  // 9. Create email using template literals
+  // Variable values
+  const firstName = "Naveen";
+  const middlename = "kumar"; // Example middlename
+  const lastname = "kancherla"; // Example lastname
+  const qty = 3;
+  const event = "Bola shankar";
+  const price = 25;
+  const ticketAgent = "TicketMaster";
+
+  // Creating the email using template strings
+  const email = `
+  Hello ${firstName}
+  Thanks for ordering ${qty} tickets to ${event}.
+  Order Details:
+  ${firstName} ${middlename} ${lastname}
+  ${qty} * ${price} = ${qty * price} to ${event}.
+  You can pick up your tickets up 30 minutes before the show
+  ${ticketAgent}.
+  `;
+  console.log("Email:", email);
+
+  //out put for 9th
+//   Email: 
+//   Hello Naveen
+//   Thanks for ordering 3 tickets to Bola shankar.
+//   Order Details:
+//   Naveen kumar kancherla
+//   3 * 25 = 75 to Bola shankar.
+//   You can pick up your tickets up 30 minutes before the show
+//   TicketMaster.
+
+  
+
+  // 10. Display article using template literals
+  const articleTitle = "React Hooks";
+  const articleBody = "An introduction to React Hooks...";
+
+  // Creating the HTML using template strings
+  const htmlContent = `
+  <section>
+    <header>
+      <h1>The React Blog</h1>
+    </header>
+    <article>
+      <h2>${articleTitle}</h2>
+      ${articleBody}
+    </article>
+    <footer>
+      <p>&copy; copyright ${new Date().getFullYear()} | The React Blog</p>
+    </footer>
+  </section>
+  `;
+
+  // Set the HTML content of the body
+  document.body.innerHTML = htmlContent;
+
+//output
+// The React Blog
+// React Hooks
+// An introduction to React Hooks...
+
+// © copyright 2023 | The React Blog
+
+  // 11. Regular function: logCompliment
+  function logCompliment() {
+    console.log("You are doing great it's a normal function");
+  }
+
+  // Invoke the logCompliment function
+  logCompliment();
+  //output
+  //You are doing great
+
+  // 12. Function expression: logComplimentExpression
+  const logComplimentExpression = function() {
+    console.log("You are doing great it's function expression");
+  };
+  logComplimentExpression();
+  //outpput
+  //You are doing great it's a function expression
+
+  // 13. Function with arguments: logComplimentWithMessage
+  function logCompliment(name, message) {
+    return name + ", " + message;   //returning value here
+  }
+
+  // Invoke logCompliment and store the result
+  const complimentMessage = logCompliment("Naveen", "You're doing an amazing job!");
+  
+  console.log(complimentMessage);
+  //output
+  //Naveen, You're doing an amazing job!
+
+  // 14. Function with default parameter: logActivity
+  function logActivity(name, activity = "coding") {
+    console.log(`${name} is ${activity}`);
+  }
+
+  // Invoke logActivity with default activity
+  logActivity("Naveen"); // Output: Naveen is coding
+  
+  // Invoke logActivity with user preference
+  logActivity("Naveen", "reading"); // Output: Naveen is reading
+
+  // 15. Arrow function: greeting
+  const greeting = (arg1, arg2) => {
+    console.log(`${arg1} is from ${arg2}`);  //used back ` ` ticks
+  };
+
+  // Invoke greeting function
+  greeting("Naveen", "Madanapalle"); // Output: Naveen is from Madanapalle
+  greeting("Gnanesh", "Chennai");     // Output: Gnanesh is from Chennai
+
+  // 16 Modified greeting arrow function
+  const greeting = (arg1, arg2) => {
+    if (arg1 === null || arg1 === undefined) {
+      throw new Error("arg1 is missing or null");
+    }
+    console.log(`${arg1} is from ${arg2}`);
+    return arg1;
+  };
+  // Testing the greeting function
+  try {
+    greeting(); // This will throw an error
+  } catch (error) {
+    console.error(error.message); 
+  }
+  const result = greeting("Naveen", "MPL");
+  console.log(result); 
+  //output
+  //  arg1 is missing or null
+  //  Naveen is from MPL
+
+  // 17. Delayed print using setTimeout: printMountains
+  const tahoe = {
+          mountains: ["Mount Everest", "Nalla mala", "Nagari hills"]
+  };
+
+  // Print function with delay using setTimeout
+  const printMountains = () => {
+    tahoe.mountains.forEach((mountain, index) => {
+      setTimeout(() => {
+        console.log(mountain);
+      }, (index + 1) * 1000); // Delay in milliseconds (1 second delay for each mountain)
+    });
+  };
+
+  // Invoke the printMountains function
+  printMountains();
+  //output
+  // Mount Everest (for ex:- 8:34:10
+  // Nalla mala              8:34:11
+  // Nagari hills            8:34:12
+
+
+  // 18 Object destructuring: sandwich
+  const sandwich = {
+    bread: "wheat",
+    meat: "broiler",
+    cheese: "blue cheese",
+    toppings: ["mashrooms", "tomato", "onion"]
+  };
+  // Access and print properties of the sandwich object
+  console.log("Bread:", sandwich.bread);
+  console.log("Meat:", sandwich.meat);
+  console.log("Cheese:", sandwich.cheese);
+  console.log("Toppings:", sandwich.toppings);
+  // output
+  // Bread: wheat 
+  // Meat: broiler 
+  // Cheese: blue cheese 
+  // Toppings: 
+  // Array(3) [ "mashrooms", "tomato", "onion" ]
+
+
+  // 19 destructure sandwich in 2 consts bread and meat and print them
+  const sandwich = {
+    bread: "wheat",
+    meat: "broiler",
+    cheese: "blue cheese",
+    toppings: ["mashrooms", "tomato", "onion"]
+  };
+  // Destructure the sandwich object into consts bread and meat
+  const { bread, meat } = sandwich;
+  // Print the destructured values
+  console.log("Destructured bread:", bread);
+  console.log("Destructured meat:", meat);
+  // output
+  // Destructured bread: wheat 
+  // Destructured meat: broiler
+
+  // 20 Destructuring assignment with let: bread2 and meat2
+  const sandwich = {
+    bread: "wheat",
+    meat: "broiler",
+    cheese: "blue cheese",
+    toppings: ["mashrooms", "tomato", "onion"]
+  };
+  // Destructure the sandwich object into let variables bread and meat
+  let { bread, meat } = sandwich;
+
+  // Assign different values to bread and meat
+  bread = "rye";
+  meat = "ham";
+
+  // Display the values of the destructured variables
+  console.log("Destructured bread:", bread);
+  console.log("Destructured meat:", meat);
+  // Display the values of sandwich.bread and sandwich.meat
+  console.log("Original sandwich.bread:", sandwich.bread);
+  console.log("Original sandwich.meat:", sandwich.meat);
+  // output
+  // Destructured bread: rye 
+  // Destructured meat: ham 
+  // Original sandwich.bread: wheat
+  // Original sandwich.meat: broiler
