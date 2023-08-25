@@ -47,6 +47,7 @@ const UserForm = () => {
   };
 
   return (
+    <center>
     <form id="form" method="get">
       <label htmlFor="email"></label>
       <input
@@ -59,6 +60,7 @@ const UserForm = () => {
       <input type="submit" id="button" value="Submit" /><br />
       <span id="error" dangerouslySetInnerHTML={{ __html: emailError }} />
     </form>
+    </center>
   );
 };
 

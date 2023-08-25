@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+h1{
+  color:rgb(1, 41, 1);
+  font-weight:700;
+}
+
+h2{
+  color:rgb(1, 12, 44);
+  font-weight:600;
+}
+.label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+button{
+  border:1px solid rgb(22, 9, 9);
+  border-radius:10px;
+  padding:10px;
+  margin:10px;
+  font-size: 20px;
+  box-shadow: 2px 2px 4px rgb(8, 16, 0);
+}
+input{
+  border:1px solid black;
+  border-radius:10px;
+  padding:5px;
+  margin:10px;
+  font-size: 18px;
+}
+button:hover {
+  background-color: rgb(117, 171, 117);
+}
+#calc{
+  border:2px solid black;
+  border-radius:10px;
+  margin-left:550px;
+  margin-right:550px;
+}
+#calc button{
+  border:2px solid black;
+  width:50px;
+}
+#calc button.id{
+  width:30%;
+}
+
+#calc h3{
+  color:#000b1f;
+}

@@ -3,19 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assessment 1</title>
+<title>Assignment 1</title>
 </head>
 <body>
 <script>
 
   let pizza = true;
 
-// 1. Assigning a value false to 'pizza' and print it on console
+// 1 Assigning a value false to 'pizza' and print it on console
 pizza = false;
-console.log("1 Updated pizza value:", pizza); // returns false
+console.log("Updated pizza value: ", pizza); // returns false
 
 // Declare a constant pizza1 with the value true
-const pizza1 = true;   // reference  error
+const pizza1 = true;   // returns false
 
 // 3 Topic scoping
   var topic = "Javascript";
@@ -23,9 +23,9 @@ const pizza1 = true;   // reference  error
     let topic = "React";
     console.log("3 Inside if block:", topic); // 3 Inside if block:React
   }
-  console.log("4 Outside if block:", topic); //4. Outside if block:Javascript
+  console.log("4 Outside if block:", topic); // 4 Outside if block:Javascript
   
-  //5 noting both the values here for 3 we will get "React"
+  //5 noteing both the values here for 3 we will get "React"
   //for 4th Javascript
 
   // 6 Get container element by ID
@@ -41,15 +41,12 @@ const pizza1 = true;   // reference  error
   for (let i = 0; i < 5; i++) {
     // Create a new div element
     const div = document.createElement("div");
-    
     // Add event listener for click event
     div.addEventListener("click", () => {
       alert(`Clicked on iteration ${i + 1}`);
     });
-    
     // Add text content to the div
     div.textContent = `Iteration ${i + 1}`;
-    
     // Add the div to the container
     container.appendChild(div);
   }
