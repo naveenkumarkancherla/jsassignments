@@ -9,7 +9,9 @@ export const Calculator = () => {
     }
   return (
     <div id="calc">
+      <br></br>
     <center>
+    <h1>React calculator</h1>
       <input align="center" type="text" value={input} name="input" placeholder="enter value" onChange={handler} />
       <br/>
       <br/>

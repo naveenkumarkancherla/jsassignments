@@ -7,8 +7,8 @@ import {Counter} from './Counter.js'
 import {Product} from './Product.js'
 import Email from './Email.js'
 import CustApp from './CustApp.js'
-import {Calculator} from './Calculator.js'
 // import {Fetch} from './Fetch.js'
+import {Router} from './Router.js'
 import './App.css'
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Card from 'react-bootstrap/Card';
@@ -36,9 +36,9 @@ function App() {
     <br></br>
     <CustApp/>
     <br/>
-    <h1 align="center">React Calculator</h1>
-    <Calculator/>
     <br/>
+    <br/>
+    <Router/>
     {/* <Fetch/> */}
 
 {/* <div classname="container mt-5">

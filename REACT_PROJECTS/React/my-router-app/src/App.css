@@ -78,6 +78,7 @@ button:hover {
   border-radius:10px;
   margin-left:550px;
   margin-right:550px;
+  margin-top:30px;
 }
 #calc button{
   border:2px solid black;
