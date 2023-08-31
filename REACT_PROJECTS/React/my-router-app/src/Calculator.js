@@ -4,12 +4,11 @@ import React,{useState} from 'react'
 export const Calculator = () => {
     const [input,setInput] = useState("");
     const [result,setResult] =  useState(0);
-    const handler = e => {
-        setInput(e.target.value);
+    const handler = event => {
+        setInput(event.target.value);
     }
   return (
     <div id="calc">
-      <br></br>
     <center>
     <h1>React calculator</h1>
       <input align="center" type="text" value={input} name="input" placeholder="enter value" onChange={handler} />

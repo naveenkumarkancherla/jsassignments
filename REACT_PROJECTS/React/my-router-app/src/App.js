@@ -40,16 +40,6 @@ function App() {
     <br/>
     <Router/>
     {/* <Fetch/> */}
-
-{/* <div classname="container mt-5">
-  <h1 classname="mb-4">Employee Management App</h1>
-    <card classname="d-flex justify-content-between">
-        <card.body>
-      <employeelist></employeelist>
-    </card.body>
-  </card>
-</div>
-*/}
     </>
   );
 }
