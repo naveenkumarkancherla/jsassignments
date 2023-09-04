@@ -29,7 +29,7 @@ export const Cart = ({ cart, removeFromCart }) => {
       </div>
       </div>
       <div className="card-footer bg-dark p-2 rounded">
-        <h3>Total Price: ₹{getTotalPrice()}</h3>
+        <h3>Total Price: Rs₹{getTotalPrice()}</h3>
         <button
           onClick={() => {
               alert('Payment successful!');

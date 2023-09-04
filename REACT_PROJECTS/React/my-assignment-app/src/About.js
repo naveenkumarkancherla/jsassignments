@@ -32,9 +32,9 @@ export const About = () => {
             <Card
               title={product.name}
               imageSrc={product.imageSrc}
-               price={product.price}
+              price={product.price}
               addToCart={() => {
-                alert('Added to cart!');
+                alert(`${product.name} Added to cart!`);
                 addToCart(product)
             }}
             />
