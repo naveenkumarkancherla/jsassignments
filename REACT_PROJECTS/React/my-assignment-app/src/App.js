@@ -6,6 +6,7 @@ import { About } from './About';
 import { Contact } from './Contact';
 import { LoginForm } from './LoginForm';
 import ProductManagement from './ProductManagement';
+import {Fetch} from './Fetch'
 
 function App() {
   return (
@@ -43,6 +44,9 @@ function App() {
             <li className="nav-item">
               <Link style={{ fontWeight: '400',fontSize:25 }}  className="nav-link" to="/productmanagement">Product Management</Link>
             </li>
+            <li className="nav-item">
+              <Link style={{ fontWeight: '400',fontSize:25 }}  className="nav-link" to="/fetch">Fetch API Todos</Link>
+            </li>
           </ul>
           <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search"/>
@@ -57,6 +61,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/loginform" element={<LoginForm />} />
         <Route path="/productmanagement" element={<ProductManagement />} />
+        <Route path="/fetch" element={<Fetch />} />
       </Routes>
     </BrowserRouter>
   );

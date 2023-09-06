@@ -3,6 +3,7 @@ import ProductInfo from './ProductInfo';
 import ProductDetails from './ProductDetails';
 
 const ProductManagement = () => {
+
   const [product, setProduct] = useState(null);
 
   const handleFormSubmit = (data) => {
@@ -16,6 +17,8 @@ const ProductManagement = () => {
       <ProductInfo onFormSubmit={handleFormSubmit} />
       <hr />
       <h2>Product Details</h2>
+      
+     {/* here i  used ternary operator for condition making*/}
       {product ? (
         <ProductDetails product={product} />
       ) : (

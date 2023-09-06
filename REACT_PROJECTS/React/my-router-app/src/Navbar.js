@@ -12,6 +12,7 @@ export function Navbar() {
         <li style={liStyle}><Link to="/calculator2" style={linkStyle}>React Calculator2</Link></li>
         <li style={liStyle}><Link to="/loginform" style={linkStyle}>Login Form</Link></li>
         <li style={liStyle}><Link to="/filterdata" style={linkStyle}>Search default input</Link></li>
+        <li style={liStyle}><Link to="/displayname" style={linkStyle}>Input Name List</Link></li>
       </ul>
     </nav>
   );
