@@ -9,6 +9,7 @@
 
   <script>
     function loadScript() {
+      const src = src;
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = src;
@@ -21,11 +22,11 @@
     loadScript()
       .then(() => {
         console.log('Script loaded successfully.');
-        // Here, you can perform any actions that depend on the loaded script.
-        // For example, you may want to call functions from the loaded script.
+        // Here, we can perform any actions that depend on the loaded script.
+        // For example, we may want to call functions from the loaded script.
       })
       .catch((error) => {
-        console.log('Error loading script.");
+        console.log('Error loading script:', error);
         // Handling the error here
       });
   </script>

@@ -7,7 +7,7 @@ function factorial(n) {
     return result;
   }
   
-  var num = 5;
+  var num = 6;
   var factorialResult = factorial(num);
   console.log("Factorial of " + num + " is: " + factorialResult);
   

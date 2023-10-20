@@ -1,0 +1,14 @@
+    console.log('hello naveen!')
+    const fs = require('fs')
+    const http = require('http')
+    const server = http.createServer((req,resp)=>{
+        console.log(req.url,req.headers,req.method)
+    })
+    server.listen(3000)
+    fs.writeFileSync('hello.txt','This is message copied to text file which is created in node code')
+    
+
+    //modules 
+    // http   https   fs   path   as
+    //require is used to import packages
+    

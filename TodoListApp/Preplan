@@ -1,0 +1,10 @@
+todo-list-app/
+  ├── server.js
+  ├── model/
+  │   └── task.model.js
+  ├── routes/
+  │   └── task.routes.js
+  ├── public/
+  │   └── index.html
+  └── .env    
+  as per the above structure you have to do the remaining things for any app connecting with backend...
