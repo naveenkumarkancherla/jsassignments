@@ -8,8 +8,8 @@ import {
   getOrdersController,
   getAllOrdersController,
   orderStatusController,
-  // createCategoryController
 } from "../controllers/authController.js";
+import {createCategoryController, updateCategoryController, categoryControlller} from "../controllers/categoryController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 
 //router object
@@ -55,11 +55,27 @@ router.put(
 );
 
 //routes
-// router.post(
-//   "/create-category",
-//   requireSignIn,
-//   isAdmin,
-//   createCategoryController
-// );
+router.post(
+  "/create-category",
+  requireSignIn,
+  isAdmin,
+  createCategoryController
+);
+
+//update category
+router.post(
+  "/update-category/:id",
+  requireSignIn,
+  isAdmin,
+  updateCategoryController
+);
+//get category
+router.get(
+  "/get-category",
+  requireSignIn,
+  isAdmin,
+  categoryControlller
+);
+
 
 export default router;
