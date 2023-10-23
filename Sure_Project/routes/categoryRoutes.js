@@ -9,7 +9,7 @@ import {
   getAllOrdersController,
   orderStatusController,
 } from "../controllers/authController.js";
-import {createCategoryController, updateCategoryController, categoryControlller} from "../controllers/categoryController.js";
+import {createCategoryController, updateCategoryController, categoryControlller, deleteCategoryCOntroller} from "../controllers/categoryController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 
 //router object
@@ -75,6 +75,14 @@ router.get(
   requireSignIn,
   isAdmin,
   categoryControlller
+);
+
+//delete category
+router.get(
+  "/delete-category/:id",
+  requireSignIn,
+  isAdmin,
+  deleteCategoryCOntroller
 );
 
 
